@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <VBox prefHeight="800.0" prefWidth="350.0" style="-fx-background-color: #800080;">
+            <children>
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #660066;">
+                    <Label layoutX="83.0" layoutY="68.0" text="Helper" textFill="WHITE">
+                        <font>
+                            <Font name="Cambria Math" size="40.0" />
+                        </font>
+                        <graphic>
+                            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/helper.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Label>
+                </Pane>
+                <Button fx:id="home" mnemonicParsing="false" onAction="#click" prefHeight="96.0" prefWidth="355.0" style="-fx-background-color: #800080;" text="Home" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="30.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/home.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="history" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" onAction="#click" prefHeight="96.0" prefWidth="355.0" style="-fx-background-color: #800080;" text="History" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="30.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/file.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="medicine" layoutX="10.0" layoutY="402.0" mnemonicParsing="false" onAction="#click" prefHeight="96.0" prefWidth="355.0" style="-fx-background-color: #800080;" text="Medicine" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="30.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/capsule.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="weight" layoutX="10.0" layoutY="498.0" mnemonicParsing="false" onAction="#click" prefHeight="96.0" prefWidth="355.0" style="-fx-background-color: #800080;" text="Weight" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="30.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/weighing-scale.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="note" layoutX="10.0" layoutY="594.0" mnemonicParsing="false" onAction="#click" prefHeight="96.0" prefWidth="355.0" style="-fx-background-color: #800080;" text="Notes" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="30.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/note.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </VBox>
+        <Pane fx:id="pane7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4d004d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="100.0" prefWidth="850.0" style="-fx-background-color: #800080;" text="Glucose measurment" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="36.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="glucose_txt" layoutX="275.0" layoutY="144.0" onAction="#click" prefHeight="50.0" prefWidth="300.0" promptText="Enter Glucose value..." style="-fx-background-color: #ffe6ff;">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+                <ComboBox fx:id="combo1" layoutX="275.0" layoutY="228.0" onAction="#click" prefHeight="50.0" prefWidth="300.0" promptText="Please Select" style="-fx-background-color: #ffe6ff;" />
+                <ComboBox fx:id="combo2" layoutX="274.0" layoutY="312.0" onAction="#click" prefHeight="50.0" prefWidth="300.0" promptText="Please Select" style="-fx-background-color: #ffe6ff;" />
+                <DatePicker fx:id="glucose_date" layoutX="274.0" layoutY="393.0" onAction="#click" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #ffe6ff;" />
+                <Button fx:id="Glucose_submit" layoutX="374.0" layoutY="522.0" mnemonicParsing="false" onAction="#SubmitGlucoseData" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #800080;" text="Submite" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+        <Pane fx:id="pane6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4d004d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="100.0" prefWidth="850.0" style="-fx-background-color: #800080;" text="Blood pressure measurment" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="36.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="blood_txt2" layoutX="275.0" layoutY="239.0" prefHeight="50.0" prefWidth="300.0" promptText="Diastolic/mmHG" style="-fx-background-color: #ffe6ff;">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="Blood_txt1" layoutX="275.0" layoutY="166.0" prefHeight="50.0" prefWidth="300.0" promptText="Systolic/mmHG" style="-fx-background-color: #ffe6ff;">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="heart_txt" layoutX="275.0" layoutY="350.0" prefHeight="50.0" prefWidth="300.0" promptText="Pulse/min" style="-fx-background-color: #ffe6ff;">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="blood_submit" layoutX="375.0" layoutY="538.0" mnemonicParsing="false" onAction="#SubmitPressureData" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #800080;" text="Submite" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="18.0" />
+                    </font>
+                </Button>
+                <DatePicker fx:id="blood_date" layoutX="275.0" layoutY="441.0" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #ffe6ff;" />
+                <Label layoutX="275.0" layoutY="131.0" text="Blood pressure" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="275.0" layoutY="315.0" text="Heart Rate" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane fx:id="pane5" prefHeight="800.0" prefWidth="850.0" style="-fx-background-color: #4d004d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="100.0" prefWidth="850.0" style="-fx-background-color: #800080;" text="More notes" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="36.0" />
+                    </font>
+                </Label>
+                <TextArea fx:id="note_txt" layoutX="25.0" layoutY="137.0" onDragDetected="#click" prefHeight="200.0" prefWidth="800.0" promptText="Add a note ....">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </TextArea>
+                <Button fx:id="note_save" layoutX="375.0" layoutY="440.0" mnemonicParsing="false" onAction="#SaveNotes" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #800080;" text="Save" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+        <Pane fx:id="pane4" prefHeight="800.0" prefWidth="850.0" style="-fx-background-color: #4d004d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="100.0" prefWidth="850.0" style="-fx-background-color: #800080;" text="Weight (Kg)" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="36.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="weight_txt" layoutX="275.0" layoutY="226.0" onAction="#click" prefHeight="50.0" prefWidth="300.0" promptText="Add your weight .....">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="weight_submit" layoutX="375.0" layoutY="481.0" mnemonicParsing="false" onAction="#SubmitWeightData" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #800080;" text="Submite" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="18.0" />
+                    </font>
+                </Button>
+                <DatePicker fx:id="weight_date" layoutX="275.0" layoutY="321.0" onAction="#click" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #ffe6ff;" />
+                <Label layoutX="275.0" layoutY="183.0" text="Weight(Kg)" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane fx:id="pane3" prefHeight="800.0" prefWidth="850.0" style="-fx-background-color: #4d004d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="medicine_save" layoutX="375.0" layoutY="456.0" mnemonicParsing="false" onAction="#SaveMedicine" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #800080;" text="Save" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="18.0" />
+                    </font>
+                </Button>
+                <TextArea fx:id="medicine_txt" layoutX="25.0" layoutY="133.0" onDragDetected="#click" prefHeight="200.0" prefWidth="800.0" promptText="Add medicine details ....">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </TextArea>
+                <Label alignment="CENTER" prefHeight="100.0" prefWidth="850.0" style="-fx-background-color: #800080;" text="Medicine" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="36.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <AnchorPane fx:id="pane2" prefHeight="800.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+                <Pane fx:id="pane2_5" prefHeight="800.0" prefWidth="850.0" style="-fx-background-color: #4d004d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                    <children>
+                        <TableView fx:id="medicine_table" editable="true" layoutX="63.0" layoutY="168.0" prefHeight="504.0" prefWidth="725.0">
+                            <columns>
+                                <TableColumn fx:id="MedicineHistory" prefWidth="724.0" text="Medicine" />
+                            </columns>
+                        </TableView>
+                        <Label layoutX="59.0" layoutY="110.0" text="History of Medicine :" textFill="WHITE">
+                            <font>
+                                <Font name="Cambria Math" size="24.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="MedicinesDelete_btn" layoutX="688.0" layoutY="105.0" mnemonicParsing="false" onAction="#medicine_Delete" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #800080;" text="Delete" textFill="WHITE">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="prev4" layoutX="9.0" layoutY="395.0" mnemonicParsing="false" onAction="#click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #4d004d;">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" onMouseClicked="#click" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                    <image>
+                                        <Image url="@../images/next.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </Pane>
+                <Pane fx:id="pane2_4" prefHeight="800.0" prefWidth="850.0" style="-fx-background-color: #4d004d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                    <children>
+                        <TableView fx:id="notes_table" editable="true" layoutX="63.0" layoutY="168.0" prefHeight="504.0" prefWidth="725.0">
+                            <columns>
+                                <TableColumn fx:id="NotesHistory" prefWidth="724.0" text="Notes" />
+                            </columns>
+                        </TableView>
+                        <Label layoutX="63.0" layoutY="103.0" text="History of Notes :" textFill="WHITE">
+                            <font>
+                                <Font name="Cambria Math" size="24.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="notesdelete_btn" layoutX="688.0" layoutY="98.0" mnemonicParsing="false" onAction="#notes_Delete" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #800080;" text="Delete" textFill="WHITE">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="next4" layoutX="788.0" layoutY="395.0" mnemonicParsing="false" onAction="#click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #4d004d;">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" onMouseClicked="#click" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/next.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="prev3" layoutX="9.0" layoutY="395.0" mnemonicParsing="false" onAction="#click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #4d004d;">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" onMouseClicked="#click" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                    <image>
+                                        <Image url="@../images/next.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </Pane>
+                <Pane fx:id="pane2_3" prefHeight="800.0" prefWidth="850.0" style="-fx-background-color: #4d004d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                    <children>
+                        <TableView fx:id="weight_table" editable="true" layoutX="63.0" layoutY="168.0" prefHeight="504.0" prefWidth="725.0">
+                            <columns>
+                                <TableColumn fx:id="weight_id" prefWidth="204.0" text="ID" />
+                                <TableColumn fx:id="WeightHistory" prefWidth="318.4000244140625" text="Weight" />
+                                <TableColumn fx:id="weight_date_col" prefWidth="202.40008544921875" text="Date" />
+      
+                                                          </columns>
+                        </TableView>
+                        <Label layoutX="63.0" layoutY="30.0" text="History of Weight(Kg) :" textFill="WHITE">
+                            <font>
+                                <Font name="Cambria Math" size="24.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="WeightSearch_txt" layoutX="63.0" layoutY="86.0" prefHeight="45.0" prefWidth="200.0" promptText="Enter Date ...." />
+                        <Button fx:id="WeightSearch_btn" layoutX="263.0" layoutY="86.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: #800080;" textFill="WHITE">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/search.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="WeightDelete_btn" layoutX="688.0" layoutY="88.0" mnemonicParsing="false" onAction="#weight_Delete" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #800080;" text="Delete" textFill="WHITE">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="prev2" layoutX="11.0" layoutY="391.0" mnemonicParsing="false" onAction="#click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #4d004d;">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" onMouseClicked="#click" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                    <image>
+                                        <Image url="@../images/next.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="next3" layoutX="788.0" layoutY="391.0" mnemonicParsing="false" onAction="#click" prefHeight="50.0" prefWidth="50.0" rotate="180.0" style="-fx-background-color: #4d004d;">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" onMouseClicked="#click" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                    <image>
+                                        <Image url="@../images/next.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </Pane>
+            <Pane fx:id="pane2_2" prefHeight="800.0" prefWidth="850.0" style="-fx-background-color: #4d004d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <TableView fx:id="glucose_table" editable="true" layoutX="63.0" layoutY="167.0" prefHeight="504.0" prefWidth="725.0">
+                     <columns>
+                        <TableColumn fx:id="glucose_id" prefWidth="192.0" text="ID" />
+                        <TableColumn fx:id="value" prefWidth="128.0" text="Glucose Value" />
+                        <TableColumn fx:id="meal" prefWidth="120.0" text="The Meal" />
+                        <TableColumn fx:id="period" prefWidth="131.0" text="Period" />
+                        <TableColumn fx:id="glucose_date_col" prefWidth="159.0" text="Date" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="63.0" layoutY="37.0" text="History of Glucose measurment :" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Math" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="GlucoseSearch_txt" layoutX="63.0" layoutY="95.0" onAction="#click" prefHeight="45.0" prefWidth="200.0" promptText="Enter Date ...." />
+                  <Button fx:id="GlucoseSearch_btn" layoutX="263.0" layoutY="96.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: #800080;" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/search.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="next2" layoutX="800.0" layoutY="402.0" mnemonicParsing="false" onAction="#click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #4d004d;">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" onMouseClicked="#click" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/next.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="prev1" layoutX="1.0" layoutY="402.0" mnemonicParsing="false" onAction="#click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #4d004d;">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" onMouseClicked="#click" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                           <image>
+                              <Image url="@../images/next.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="GlucoseDelete_btn" layoutX="688.0" layoutY="100.0" mnemonicParsing="false" onAction="#glucose_Delete" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #660066;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+                <Pane fx:id="pane2_1" prefHeight="800.0" prefWidth="850.0" style="-fx-background-color: #4d004d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="100.0" prefWidth="850.0" style="-fx-background-color: #800080;" text="History" textFill="WHITE">
+                            <font>
+                                <Font name="Cambria Math" size="36.0" />
+                            </font>
+                        </Label>
+                        <TableView fx:id="pressure_table" editable="true" layoutX="57.0" layoutY="282.0" prefHeight="504.0" prefWidth="736.0">
+                            <columns>
+                                <TableColumn fx:id="pressure_id" prefWidth="190.0" text="ID" />
+                                <TableColumn fx:id="systolic" prefWidth="134.0" text="Systolic" />
+                                <TableColumn fx:id="diastolic" prefWidth="142.0" text="Diastolic" />
+                                <TableColumn fx:id="HeartRate" prefWidth="106.0" text="Heart Rate" />
+                                <TableColumn fx:id="pressure_date_col" prefWidth="163.0" text="Date" />
+                            </columns>
+                        </TableView>
+                        <Label layoutX="57.0" layoutY="137.0" text="History of Blood pressure measurment :" textFill="WHITE">
+                            <font>
+                                <Font name="Cambria Math" size="24.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="PressureSearch_txt" layoutX="57.0" layoutY="200.0" onAction="#click" prefHeight="45.0" prefWidth="200.0" promptText="Enter Date ...." />
+                        <Button fx:id="PressureSearch_btn" layoutX="257.0" layoutY="201.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: #800080;" textFill="WHITE">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/search.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="next1" layoutX="793.0" layoutY="509.0" mnemonicParsing="false" onAction="#click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #4d004d;">
+                     <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" onMouseClicked="#click" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/next.png" />
+                                    </image>
+                                </ImageView>
+                     </graphic>
+                        </Button>
+                  <Button fx:id="PressureDelete_btn" layoutX="693.0" layoutY="205.0" mnemonicParsing="false" onAction="#pressure_Delete" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #660066;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </Pane>
+         </children>
+        </AnchorPane>
+        <Pane fx:id="pane1" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #4d004d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#660066" height="275.0" layoutX="202.0" layoutY="86.0" stroke="#660066" strokeType="INSIDE" style="-fx-background-color: #b33c00;" width="440.0" />
+                <Button fx:id="blood" layoutX="232.0" layoutY="124.0" mnemonicParsing="false" onAction="#click" prefHeight="200.0" prefWidth="380.0" style="-fx-background-color: #800080;" text="Blood pressure measurment" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="24.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="390.0" layoutY="133.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/blood-pressure.png" />
+                    </image>
+                </ImageView>
+                <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#660066" height="248.0" layoutX="205.0" layoutY="456.0" stroke="#660066" strokeType="INSIDE" style="-fx-background-color: #b33c00;" width="440.0" />
+                <Button fx:id="glucose" layoutX="235.0" layoutY="490.0" mnemonicParsing="false" onAction="#click" prefHeight="182.0" prefWidth="380.0" style="-fx-background-color: #800080;" text="Glucose measurment" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria Math" size="24.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="393.0" layoutY="507.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/glucose.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
